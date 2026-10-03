@@ -326,36 +326,4 @@ You can also test manually in the website:
 4. Enable **Animate execution** and run Round Robin to see one time slice appear at a time.
 5. Try a first process with Arrival Time greater than `0` to see an `IDLE` chart block.
 
-## Screenshots
 
-Suggested screenshots to add to this section after running the app:
-
-1. FCFS showing the Gantt chart and metric cards.
-2. Round Robin with **Animate execution** enabled.
-3. A workload with a delayed first arrival showing the `IDLE` block.
-
-## Interview explanation
-
-Use this 2–3 minute explanation:
-
-> I built a browser-based CPU Scheduling Simulator to visualize how operating systems decide which process gets the CPU. The user enters processes with arrival time, burst time and priority, selects an algorithm, and the scheduling engine generates the execution sequence. The frontend then converts that sequence into a Gantt chart and calculates completion, turnaround and waiting times.
-
-Important points to mention:
-
-- The project uses React, JavaScript/JSX, HTML, CSS, Vite, and Node.js for tooling.
-- It has no backend, database, or authentication; all calculations happen in the browser.
-- Each scheduling algorithm is kept in its own file, separate from React UI code.
-- Every algorithm returns the same type of result: a timeline, completion times, and execution order.
-- A separate metrics utility calculates TAT, WT, averages, and CPU utilization.
-- The Gantt chart makes CPU execution, time slices, and idle time easy to understand visually.
-- The simulator handles equal values using deterministic tie-breaking rules, so results are repeatable.
-
-## Common issues
-
-| Problem | Solution |
-| --- | --- |
-| `npm` command is not found | Install Node.js, then close and reopen the terminal. |
-| Website does not open | Check the local URL printed after `npm run dev`. |
-| Port is already in use | Stop the previous Vite terminal with `Ctrl + C`, then run `npm run dev` again. |
-| Simulation does not run | Read the validation message and correct the highlighted type of input problem. |
-| Round Robin quantum input is missing | Select **Round Robin**; the field is intentionally hidden for other algorithms. |
